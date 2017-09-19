@@ -1,6 +1,7 @@
 //Rextester.Program.Main is the entry point for your code. Don't change it.
 //Compiler version 4.0.30319.17929 for Microsoft (R) .NET Framework 4.5
 
+//For test this code use this online tool -->http://rextester.com/
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,7 +55,7 @@ namespace Rextester {
    Console.WriteLine("Happy Birthday! " + name);
   }
 
-  public void PrintDetails() {
+  public virtual void PrintDetails() {
    Console.WriteLine("Name: " + name);
    Console.WriteLine("Age: " + age);
    Console.WriteLine("Occupation: " + occupation);
@@ -70,6 +71,15 @@ namespace Rextester {
   public Driver(string name, int age, string occupation, int id, string category): base(name, age, occupation) {
    this.id = id;
    this.category = category;
+  }
+
+  public override void PrintDetails() {
+   Console.WriteLine("Name: " + name);
+   Console.WriteLine("Age: " + age);
+   Console.WriteLine("Occupation: " + occupation);
+   Console.WriteLine("Category: " + category);
+   Console.WriteLine("ID: " + id);
+   Console.WriteLine("===========================");
   }
  }
 
